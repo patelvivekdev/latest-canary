@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { connection } from "next/server";
 
 async function getUser({ userName } = { userName: "string" }) {
@@ -28,6 +29,7 @@ export default async function getUserInfo({
         height={48}
       />
       <h1 className="text-lg sm:text-xl font-semibold">Welcome, {user.name}</h1>
+      <Link href={`/${userName}`}>{user.name}</Link>
     </header>
   );
 }
