@@ -1,5 +1,5 @@
-import { unstable_noStore } from "next/cache";
 import Image from "next/image";
+import { connection } from "next/server";
 
 async function getUser({ userName } = { userName: "string" }) {
   await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -13,7 +13,7 @@ export default async function getUserInfo({
 }: {
   userNames: string[];
 }) {
-  unstable_noStore();
+  await connection();
   // get the random user name from the list
   const userName = userNames[Math.floor(Math.random() * userNames.length)];
   const user = await getUser({ userName });
