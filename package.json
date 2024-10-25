@@ -1,6 +1,6 @@
 {
   "name": "latest-canary",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -9,19 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
-    "next": "15.0.0-canary.28",
-    "react": "19.0.0-rc.0",
-    "react-dom": "19.0.0-rc.0"
+    "babel-plugin-react-compiler": "^19.0.0-beta-8a03594-20241020",
+    "next": "15.0.2-canary.6",
+    "react": "19.0.0-rc-1631855f-20241023",
+    "react-dom": "19.0.0-rc-1631855f-20241023"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "@types/node": "^20.14.2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "15.0.0-canary.28"
+    "@types/node": "^22.7.9",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.0.2-canary.6",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   }
 }

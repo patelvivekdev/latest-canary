@@ -1,7 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   experimental: {
     ppr: true,
+    dynamicIO: true,
     reactCompiler: true,
   },
   logging: {
