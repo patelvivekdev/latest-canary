@@ -12,10 +12,23 @@ async function getUser(userName: string) {
   return res.json();
 }
 
+async function getCurrentTime() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  let time = new Date().toUTCString();
+  return time;
+}
+
 export async function generateStaticParams() {
-  // Return an array of objects representing your dynamic routes
-  // For example:
   return [{ slug: "patelvivekdev" }, { slug: "vercel" }, { slug: "nextjs" }];
+}
+
+async function CurrentDate() {
+  const time = await getCurrentTime();
+  return (
+    <div className="flex flex-row justify-center items-center gap-4">
+      <p>{time}</p>
+    </div>
+  );
 }
 
 async function UserProfile({ userName }: { userName: string }) {
@@ -56,7 +69,9 @@ export default async function BlogPage({
 
   return (
     <>
-      <h1 className="text-4xl text-center mb-8">This is static part</h1>
+      <h1 className="text-4xl text-center mb-8">
+        This is static part with param {slug}
+      </h1>
       <Suspense
         fallback={
           <div className="flex flex-row justify-center items-center gap-4">
@@ -66,6 +81,15 @@ export default async function BlogPage({
         }
       >
         <UserProfile userName={slug} />
+      </Suspense>
+      <Suspense
+        fallback={
+          <div className="flex flex-row justify-center items-center gap-4">
+            <div className="h-4 w-48 bg-gray-300 rounded animate-pulse" />
+          </div>
+        }
+      >
+        <CurrentDate />
       </Suspense>
     </>
   );
