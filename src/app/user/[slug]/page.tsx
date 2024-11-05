@@ -60,7 +60,7 @@ async function UserProfile({ userName }: { userName: string }) {
   );
 }
 
-export default async function BlogPage({
+export default async function UserPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
