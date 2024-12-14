@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     ppr: true,
     reactCompiler: true,
     dynamicIO: true,
+    authInterrupts: true,
   },
   logging: {
     fetches: {

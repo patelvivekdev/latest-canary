@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { unstable_cacheLife as cacheLife } from "next/cache";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 async function getUser(userName: string) {
   "use cache";
@@ -68,10 +69,16 @@ export default async function UserPage({
   const slug = (await params).slug;
 
   return (
-    <>
+    <div className="text-center flex flex-col gap-4 justify-center items-center min-h-screen">
       <h1 className="text-4xl text-center mb-8">
         This is static part with param {slug}
       </h1>
+      <Link
+        href="/"
+        className="mx-auto text-center py-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-all duration-200 ease-in-out"
+      >
+        Go back to home
+      </Link>
       <Suspense
         fallback={
           <div className="flex flex-row justify-center items-center gap-4">
@@ -91,6 +98,6 @@ export default async function UserPage({
       >
         <CurrentDate />
       </Suspense>
-    </>
+    </div>
   );
 }
