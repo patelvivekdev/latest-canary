@@ -10,7 +10,7 @@ export async function GET() {
   }
 
   // If the user is authenticated, render the dashboard
-  return new Response("Welcome to the dashboard! 🎉", {
+  return new Response("Welcome to the dashboard!", {
     status: 200,
     headers: {
       "content-type": "text/plain",
