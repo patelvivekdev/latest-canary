@@ -1,7 +1,7 @@
 {
   "name": "latest-canary-nextjs",
   "description": "Testing the latest canary version of Next.js",
-  "version": "15.1.1-canary.12",
+  "version": "15.2.0-canary.28",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -13,27 +13,27 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "@next/bundle-analyzer": "15.1.1-canary.12",
-    "@next/eslint-plugin-next": "15.1.1-canary.12",
-    "babel-plugin-react-compiler": "^19.0.0-beta-201e55d-20241215",
+    "@next/bundle-analyzer": "15.2.0-canary.28",
+    "@next/eslint-plugin-next": "15.2.0-canary.28",
+    "babel-plugin-react-compiler": "^19.0.0-beta-27714ef-20250124",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.453.0",
-    "next": "15.1.1-canary.12",
+    "next": "15.2.0-canary.28",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.2",
+    "@types/node": "^22.12.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
-    "eslint-config-next": "15.1.1-canary.12",
-    "postcss": "^8.4.49",
+    "eslint-config-next": "15.2.0-canary.28",
+    "postcss": "^8.5.1",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^3.4.16",
-    "typescript": "^5.7.2"
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
   }
 }

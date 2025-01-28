@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 export default async function Home() {
-  const userNames = ["patelvivekdev", "vercel", "nextjs"];
+  // const userNames = ["patelvivekdev", "vercel", "nextjs"];
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 pb-20 gap-16 sm:p-20">
-      <div className="flex flex-row items-center justify-center gap-4">
+      {/* <div className="flex flex-row items-center justify-center gap-4">
         {userNames.map((userName) => (
           <Link
             key={userName}
@@ -14,7 +14,7 @@ export default async function Home() {
             {userName}
           </Link>
         ))}
-      </div>
+      </div> */}
       <div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link

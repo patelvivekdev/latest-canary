@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Suspense } from "react";
 import { unstable_cacheLife as cacheLife } from "next/cache";
-import { notFound } from "next/navigation";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 async function getUser(userName: string) {
   "use cache";
